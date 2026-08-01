@@ -415,6 +415,11 @@
               <FileType>1</FileType>
               <FilePath>..\Core\Src\bsp\led\bsp_led.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\bsp\key\bsp_key.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

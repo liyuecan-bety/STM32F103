@@ -4,6 +4,7 @@
 "hal_00_source\stm32f1xx_it.o"
 "hal_00_source\stm32f1xx_hal_msp.o"
 "hal_00_source\bsp_led.o"
+"hal_00_source\bsp_key.o"
 "hal_00_source\stm32f1xx_hal_gpio_ex.o"
 "hal_00_source\stm32f1xx_hal.o"
 "hal_00_source\stm32f1xx_hal_rcc.o"

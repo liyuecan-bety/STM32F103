@@ -3,7 +3,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "led\bsp_led.h"
-
+#include "key\bsp_key.h"
 
 void SystemClock_Config(void);
 
@@ -11,8 +11,13 @@ int main(void)
 {
   HAL_Init();
   LED_Init();
+	KEY_Init();
   while (1){
-		HAL_GPIO_WritePin(GPIOB,GPIO_PIN_1,GPIO_PIN_RESET);
+		if(Key_Scan(GPIOA,GPIO_PIN_0) == KEY_ON){
+			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
+		}
+		else	
+			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
   }
 }
 
