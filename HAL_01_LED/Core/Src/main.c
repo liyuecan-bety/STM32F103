@@ -13,11 +13,28 @@ int main(void)
   LED_Init();
 	KEY_Init();
   while (1){
-		if(Key_Scan(GPIOA,GPIO_PIN_0) == KEY_ON){
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
-		}
-		else	
-			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
+		
+		//按键控制LED亮灭
+		if(Key_Scan(GPIOC,GPIO_PIN_13) == KEY_ON)
+			LED_B_Toggle;
+		if(Key_Scan(GPIOA,GPIO_PIN_0) == KEY_ON)
+			LED_G_Toggle;
+		
+		
+			//流水灯
+//		LED_R_Toggle;
+//		HAL_Delay(1000);
+//		LED_R_Toggle;
+//		HAL_Delay(1000);
+//		LED_G_Toggle;
+//		HAL_Delay(1000);
+//		LED_G_Toggle;
+//		HAL_Delay(1000);
+//		LED_B_Toggle;
+//		HAL_Delay(1000);
+//		LED_B_Toggle;
+		
+		
   }
 }
 

@@ -1,4 +1,6 @@
 #include "led\bsp_led.h"
+
+//LED³õÊ¼»¯º¯Êý
 void LED_Init(void)
 {
 
@@ -18,3 +20,4 @@ void LED_Init(void)
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 }
+
