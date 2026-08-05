@@ -20,6 +20,8 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f1xx_it.h"
+#include "led\bsp_led.h"
+#include "exti\bsp_exti.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 /* USER CODE END Includes */
@@ -199,5 +201,24 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /* USER CODE BEGIN 1 */
-
+void EXTI0_IRQHandler(void)
+{
+	
+	if(__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_0)!=RESET)
+	{
+		
+		LED_R_Toggle;
+		__HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_0);
+	}
+}
+void EXTI15_10_IRQHandler(void)
+{
+	
+	if(__HAL_GPIO_EXTI_GET_IT(GPIO_PIN_13)!=RESET)
+	{
+		
+		LED_G_Toggle;
+		__HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_13);
+	}
+}
 /* USER CODE END 1 */

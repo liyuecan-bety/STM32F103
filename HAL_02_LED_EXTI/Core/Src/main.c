@@ -2,6 +2,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "stm32f1xx.h"
 #include "led\bsp_led.h"
 #include "exti\bsp_exti.h"
 
@@ -9,7 +10,7 @@ void SystemClock_Config(void);
 
 int main(void)
 {
-  HAL_Init();
+  SystemClock_Config();
   LED_Init();
 	EXTI_Init();
   while (1){

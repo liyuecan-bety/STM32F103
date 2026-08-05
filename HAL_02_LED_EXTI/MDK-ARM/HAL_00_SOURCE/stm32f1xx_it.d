@@ -26,3 +26,5 @@ hal_00_source\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_
 hal_00_source\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 hal_00_source\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 hal_00_source\stm32f1xx_it.o: ../Core/Inc/stm32f1xx_it.h
+hal_00_source\stm32f1xx_it.o: ..\Core\Inc\bsp\led\bsp_led.h
+hal_00_source\stm32f1xx_it.o: ..\Core\Inc\bsp\exti\bsp_exti.h
